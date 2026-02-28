@@ -1,0 +1,32 @@
+services:
+  # Full-Stack Service (Backend + Frontend)
+  - type: web
+    name: janu-collections-fullstack
+    env: node
+    plan: starter
+    buildCommand: chmod +x build.sh && ./build.sh
+    startCommand: node backend/server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: MONGODB_URI
+        sync: false
+      - key: JWT_SECRET
+        sync: false
+      - key: STRIPE_SECRET_KEY
+        sync: false
+      - key: ADMIN_EMAIL
+        sync: false
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: ADMIN_NAME
+        sync: false
+      - key: UPLOADS_PATH
+        value: /opt/render/project/src/uploads
+      - key: RATE_LIMIT_WINDOW_MS
+        value: 900000
+      - key: RATE_LIMIT_MAX_REQUESTS
+        value: 1000
+    healthCheckPath: /api/health
