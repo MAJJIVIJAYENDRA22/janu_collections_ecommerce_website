@@ -44,3 +44,6 @@ This project was developed using AI-powered tools to accelerate:
 - Order Management
 - Payment Settings
 - Newsletter Subscription
+
+**License**
+This project is licensed under the MIT License.
