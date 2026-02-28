@@ -44,5 +44,3 @@ This project was developed using AI-powered tools to accelerate:
 - Order Management
 - Payment Settings
 - Newsletter Subscription
-
-## 📂 Project Structure
